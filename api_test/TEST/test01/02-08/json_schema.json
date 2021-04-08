@@ -1,0 +1,67 @@
+#001
+{
+	"success":true,
+	"topic_id":"5f9e4be38a40383a1a250351"
+}
+schema = {
+	"type":"object",
+	"properties":{
+		"success":{
+			"description":"this is the result status of request",
+			"type":"boolean"
+		},
+		"topic_id":{
+			"description":"the unique identifier for topic",
+			"type":"string"
+		}
+	},
+	"required":["success","topic_id"]
+}
+
+
+#002
+schema = {
+	"type":"object",
+	"properties":{
+		"subjects":{
+			"type":"array",
+			"items":{
+				"type":"object",
+				"properties":{
+					"rate":{
+						"type":"string"
+					},
+					"cover_x":{
+						"type":"string"
+					},
+					"title":{
+						"type":"string"
+					},
+					"playable":{
+						"type":"boolean"
+					},
+					"cover":{
+						"type":"string"
+					},
+					"cover_y":{
+						"type":"number"
+					},
+					"is_new":{
+						"type":"boolean"
+					}
+				},
+				"required":["rate","cover_x","title","playable","cover","cover_y","is_new"]
+			},
+			"uniqueItems":true,
+		}
+	},
+	"required":["subjects"]
+}
+
+#将实际结果与定义好的schema进行结果对比
+validate(instance=res.json(),schema=schema)
+
+
+
+
+

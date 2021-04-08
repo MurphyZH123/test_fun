@@ -1,0 +1,8 @@
+DEBUG:root:this is debug
+INFO:root:this is info
+WARNING:root:this is warning
+ERROR:root:this is error
+DEBUG:practice:debug message
+DEBUG:practice:debug message
+DEBUG:practice:debug message
+DEBUG:practice:debug message

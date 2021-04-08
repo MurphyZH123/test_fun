@@ -1,0 +1,52 @@
+{
+  "创建话题1": {
+    "method": "post",
+    "url": "http://49.233.108.117:3000/api/v1/topics",
+    "data": {
+      "accesstoken":"9d8c58bb-b6be-4814-b7ce-ede1b2025738",
+      "title":"xxxxxxxx天气不错xxxxxxxx",
+      "tab":"ask",
+      "content":"xxxxxxxxxx出来玩xxxxxxxxxxxxxxx"
+    },
+    "json_schema": {
+      "type": "object",
+        "required": [
+            "success",
+            "topic_id"
+        ],
+        "properties": {
+            "success": {
+                "type": "boolean"
+            },
+            "topic_id": {
+                "type": "string"
+            }
+        }
+    }
+  },
+  "创建话题2": {
+    "method": "post",
+    "url": "http://49.233.108.117:3000/api/v1/topics",
+    "data": {
+      "accesstoken":"9d8c58bb-b6be-4814-b7ce-ede1b2025738",
+      "title":"xxxxxxxx阴天快乐xxxxxxxx",
+      "tab":"ask",
+      "content":"xxxxxxxxxx躺在家里睡觉比较稳妥xxxxxxxxxxxxxxx"
+    },
+    "json_schema": {
+      "type": "object",
+        "required": [
+            "success",
+            "topic_id"
+        ],
+        "properties": {
+            "success": {
+                "type": "boolean"
+            },
+            "topic_id": {
+                "type": "string"
+            }
+        }
+    }
+  }
+}

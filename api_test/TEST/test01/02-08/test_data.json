@@ -1,0 +1,22 @@
+{
+	"主题首页":{
+		"method":"get",
+		"url":"http://49.233.108.117:3000/api/v1/topics",
+		"data":{
+			"page":1,
+			"tab":"ask",
+			"limit":1,
+			"mdrender":"flase"
+		}
+	},
+	"发布话题":{
+		"method":"post",
+		"url":"http://49.233.108.117:3000/api/v1/topics",
+		"data":{
+			"accesstoken":" ",
+			"title":"今天天气为何这么冷",
+			"tab":"ask",
+			"content":"春天马上就要来了，ahhhhh"
+		}
+	}
+}
