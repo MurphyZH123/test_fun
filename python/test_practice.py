@@ -54,17 +54,31 @@ __Blog__   = https://www.cnblogs.com/poloyy/
 
 # print(len('qwqwqwqwqwqwqwqwqwqw'))
 
-import pytest
-@pytest.mark.parametrize(('x','y'),[(1,1),(1,0),(0,1)])
-def test_simple_assume(x,y):
-    print(format('测试数据为{x},{y}'))
-    with assume :assert x==y
-    with assume :assert x+y>1
-    with assume :assert x>1
-    print("测试完成！")
+# import pytest
+# @pytest.mark.parametrize(('x','y'),[(1,1),(1,0),(0,1)])
+# def test_simple_assume(x,y):
+#     print(format('测试数据为{x},{y}'))
+#     with assume :assert x==y
+#     with assume :assert x+y>1
+#     with assume :assert x>1
+#     print("测试完成！")
+#
+# if __name__ =="__main__":
+#     pytest.main(['-sv','test_practice.py'])
 
-if __name__ =="__main__":
-    pytest.main(['-sv','test_practice.py'])
+
+def test4(a, b=2, *args, **kwargs):
+    print(a, b, args, kwargs)
+
+
+test4(1)
+test4(1, 1)
+test4(1, *(1, 2, 3, 3, 4,))
+test4(1, *(1, 2, 3, 3, 4,), cc=123, c=123)
+
+lists = ["a", "b"]
+dicts = {"key": 123}
+test4(1, *lists, **dicts)
 
 
 
