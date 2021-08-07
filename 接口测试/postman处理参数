@@ -1,0 +1,48 @@
+一、处理token
+1、首先跑通登录接口，获取返回的信息
+{
+    "Response": {
+        "expire_date": 1628136131087,
+        "user": "00326431",
+        "modules": "campaign,member,notify,coupon",
+        "status": "success",
+        "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDMyNjQzMSIsImlhdCI6MTYyODEzMjUzMSwiZXhwIjoxNjI4MTM2MTMxLCJqdGkiOiIyIn0.iJqC9-vequSoff0bSDKWSA9xNY7UMSReTaOgetaySnc"
+    }
+}
+
+
+2、在登录接口的Tests区域，做如下的处理
+pm.test("Status code is 200", function () {
+
+  pm.response.to.have.status(200);
+
+});
+
+// 把responseBody转为json字符串
+var data = JSON.parse(responseBody);
+
+// 设置环境变量token，供后面的接口引用
+pm.environment.set("token", data.Response.token);
+
+
+3、再次运行登录接口，此时在小眼睛-虚拟环境中，可以看到token成为环境变量
+
+
+
+4、在对应需要token的接口的Header，写上所需的Header参数
+accessToken:{token}
+
+
+5、在对应需要token的接口Authorization处，查看是否有对应的变量
+Type处，选择对应用到的token，一般用Bearer Token
+
+
+
+二、全局变量
+
+
+
+
+
+
+

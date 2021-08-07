@@ -9,24 +9,27 @@
 
 """
 
+
 def is_iterable(param):
-    try: 
-        iter(param) 
+    try:
+        iter(param)
         return True
     except TypeError:
         return False
+
 
 params = [
     1234,
     '1234',
     [1, 2, 3, 4],
     set([1, 2, 3, 4]),
-    {1:1, 2:2, 3:3, 4:4},
+    {1: 1, 2: 2, 3: 3, 4: 4},
     (1, 2, 3, 4)
 ]
-    
+
 for param in params:
     print('{} is iterable? {}'.format(param, is_iterable(param)))
+
 
 ########## 输出 ##########
 
@@ -38,14 +41,8 @@ for param in params:
 # (1, 2, 3, 4) is iterable? True
 
 
-
-
-
-
-
-#给定一个 list 和一个指定数字，求这个数字在 list 中的位置。
-#enumerate()的作用是返回列表中元素的索引号和值。
-
+# 给定一个 list 和一个指定数字，求这个数字在 list 中的位置。
+# enumerate()的作用是返回列表中元素的索引号和值。
 
 def index_normal(L, target):
     result = []
@@ -54,25 +51,9 @@ def index_normal(L, target):
             result.append(i)
     return result
 
-print(index_normal([1, 6, 2, 4, 5, 2, 8, 6, 3, 2], 2))
 
+print(index_normal([1, 6, 2, 4, 5, 2, 8, 6, 3, 2], 2))
 
 ########## 输出 ##########
 
 # [2, 5, 9]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
