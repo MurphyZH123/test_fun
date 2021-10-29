@@ -37,7 +37,7 @@ print('B()是迭代器吗：',isinstance(B(), Iterator))
 """
 for循环的本质
 说到__iter__()__next__()方法
-
+"""
 
 
 
